@@ -1,15 +1,13 @@
 ## Classifying undiagnosed diabetes using NHANES 2011-2016
 
-### Creating undiagnosed variable
+### Creating outcome variable
 If hemoglobin a1c(a1c) is < 6.5 and physician self-report diagnosis is 0 then no diabetes.
 If a1c is > 6.5 and physician self-report diagnosis 0 then undiagnosed diabetes.
 If a1c is > 6.5 and physician self-report diagnosis is 1 then diabetes.
 
-### Visualize missing data pattern.
+### Visualize missing data pattern
 Medical examination data possess higher proportion of NaNs
 Impute missing values using KNN imputer and Multiple Imputation.
-
-### Generate seperate dataframes with corresponding missing value approach as well as baseline and compare.
 
 ### Proceed with multiple imputation dataset.
 
