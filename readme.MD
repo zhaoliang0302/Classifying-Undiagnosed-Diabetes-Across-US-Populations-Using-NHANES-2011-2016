@@ -9,14 +9,13 @@ If a1c is > 6.5 and physician self-report diagnosis is 1 then diabetes.
 Medical examination data possess higher proportion of NaNs
 Impute missing values using KNN imputer and Multiple Imputation.
 
-### Proceed with multiple imputation dataset.
+### Pre-processing
+Proceed with multiple imputation dataset.
+Conduct PCA for feature selection, however due to interpretation of sociodemographic variables were kept in model.
+Standardized dataset after train test split.
+Conducted SMOTE to handle class imbalance.
 
-### Conduct PCA for feature selection, however due to interpretation of sociodemographic variables were kept in model.
-
-### Standardized dataset after train test split.
-
-### Conducted SMOTE to handle class imbalance.
-
+### modeling
 Performed logistic regression at set thresholds of 0.25, 0.5, 0.75 to assess increase recall score.
 Recall was favored over precision because it is more appropriate to have false positives then false negatives in the case with diagnosis. It is better overall to screen patients for disease than rather have no screening at all.
 
