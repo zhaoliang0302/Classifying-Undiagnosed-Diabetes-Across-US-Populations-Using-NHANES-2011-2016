@@ -28,6 +28,6 @@ Gradientboost
 XGBoost with cvGrid
 Support vector machine
 
-Lets recheck  
+
 
 ## More coming soon!  
