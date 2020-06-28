@@ -1,5 +1,5 @@
 ## Classifying undiagnosed diabetes using NHANES dataset
-a
+
 ### Creating outcome variable
 If hemoglobin a1c(a1c) is < 6.5 and physician self-report diagnosis is 0 then no diabetes.
 If a1c is > 6.5 and physician self-report diagnosis 0 then undiagnosed diabetes.
