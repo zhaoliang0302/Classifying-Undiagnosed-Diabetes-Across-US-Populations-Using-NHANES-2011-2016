@@ -38,5 +38,5 @@ XGBoost was also performed at different thresholds. However, while recall scores
 ### Support Vector Machine
 Support vector machine was performed at same three thresholds. It was found that recall scores increased for undiagnosed cases to 60%.
 
-### Conclusion
+## Conclusion
 While alghorithmns such as regression, XGBoost, and SVM are very powerful, more data pertaining to undiagnosed cases of diabetes needs to be acquired by the NHANES in order to enhance population surveillance. 
