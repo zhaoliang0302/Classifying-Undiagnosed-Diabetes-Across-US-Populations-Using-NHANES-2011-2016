@@ -25,21 +25,18 @@ Due to class imbalance among variables, sampling technique, SMOTE, was conducted
 Following SMOTE, the training set was standardized. 
 Then PCA was conducted with an exhibition of feature selection. Feature selection had alluded to the medical examination variables, however, due to the public health protocols sociodemographic variables were kept in model.
 
-### Modeling
-In the case of disease diagnosis false positives are far more favorable to have then false negatives.
-Therefore, logistic regression 
-Performed logistic regression at set thresholds of 0.25, 0.5, 0.75 to assess increase recall score.
-Recall was favored over precision because it is more appropriate to have false positives then false negatives in the case with diagnosis. It is better overall to screen patients for disease than rather have no screening at all.
+## Modeling
+In the case of disease diagnosis, false positives are far more favorable to have then false negatives (recall > precision). It is better overall to screen patients for disease rather than have no screening.
 
-Following models were performed:
-Decision trees with cvGrid
-Bagged trees
-Random Forest with cvGrid
-Adaboost
-Gradientboost
-XGBoost with cvGrid
-Support vector machine
+### Multinomial Logistic Regression
+Multinomial logistic regression was performed (3 classes) at several different thresholds (0.25, 0.5, 0.75).
+It was found that by reducing the threshold to 0.25, the overall recall score had seen an increase to ~58%.
 
+### XGBoost (CV Grid)
+XGBoost was also performed at different thresholds. However, while recall scores for nondiabetic and diabetic cases increased, the recall scores for undiagnosed cases remained around ~58%.
 
+### Support Vector Machine
+Support vector machine was performed at same three thresholds. It was found that recall scores increased for undiagnosed cases to 60%.
 
-# More coming soon!  
+### Conclusion
+While alghorithmns such as regression, XGBoost, and SVM are very powerful, more data pertaining to undiagnosed cases of diabetes needs to be acquired by the NHANES in order to enhance population surveillance. 
