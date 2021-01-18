@@ -23,14 +23,13 @@ Both KNN and MI techniques were shown to have very similiar outcomes, however fo
 The MI imputed dataset was split into training and testing sets.
 Due to class imbalance among variables, sampling technique, SMOTE, was conducted.
 Following SMOTE, the training set was standardized. 
-Then PCA was conducted with an exhibition of feature selection. Feature selection had alluded to the medical examination variables, however, due to the public health protocols sociodemographic variables were kept in model.
 
 ## Modeling
-In the case of disease diagnosis, false positives are far more favorable to have then false negatives (recall > precision). It is better overall to screen patients for disease rather than have no screening.
+In the case of disease diagnoses, having higher recall than precision scores is favored to decrease the chances of overlooking individuals with actual disease and left to be untreated.
 
 ### Multinomial Logistic Regression
-Multinomial logistic regression was performed (3 classes) at several different thresholds (0.25, 0.5, 0.75).
-It was found that by reducing the threshold to 0.25, the overall recall score had seen an increase to ~58%.
+Multinomial logistic regression was performed (3 classes) at several different thresholds.
+It was found that by reducing the threshold to 25%, the overall recall score had seen an increase to ~58%.
 
 ### XGBoost (CV Grid)
 XGBoost was also performed at different thresholds. However, while recall scores for nondiabetic and diabetic cases increased, the recall scores for undiagnosed cases remained around ~58%.
