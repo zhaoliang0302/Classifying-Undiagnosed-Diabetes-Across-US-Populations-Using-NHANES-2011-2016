@@ -15,11 +15,22 @@ For example,
   A1c > 6.5 and physician diagnosis yes diabetes = diabetes.
 
 ### Missing Data
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_1.png)
 The nature of survey data such as the NHANES is prone to limitations such as the presence of missing data and step patterns.
 In this dataset medical examination data possessed much higher number of missing values, so to curb this issue Multiple Imputation Chained Equations (MICE) 
 was performed.
 
-![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_1.png)
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_2.png)
+
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_5.png)
+
+### Overview of Risk Factors by Diabetes Classes
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_3.png)
+
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_4.png)
+
+### Examine Correlations to curb Multicollinearity
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_6.png)
 
 ### Processing and Split
 Dataset was split into training and testing sets.
@@ -30,6 +41,7 @@ In the case of disease diagnoses, having higher recall than precision scores is 
 
 ### Logistic Regression OVR
 Logistic regression OVR produced recall score for undiagnosed diabetes at 63%.
-
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_7.png)
 ### SVC Linear OVR
 SVC Linear OVR produced highest recalled score for undiagnosed diabetes at 73%.
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_8.png)
