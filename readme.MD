@@ -1,3 +1,4 @@
+# Currently editing
 ## 73% Recall Score for Classification of Undiagnosed Diabetes Status using Clinical and Questionaire Data from NHANES (2011-2016)
 
 ### Dataset
@@ -18,6 +19,7 @@ The nature of survey data such as the NHANES is prone to limitations such as the
 In this dataset medical examination data possessed much higher number of missing values, so to curb this issue Multiple Imputation Chained Equations (MICE) 
 was performed.
 
+![alt text](https://github.com/cspark2610/medical-transcription-classification-/blob/main/images/img1.png)
 
 ### Processing and Split
 Dataset was split into training and testing sets.
