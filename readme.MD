@@ -27,5 +27,5 @@ Standardized and Normalized on training set to mitigtgate data leakage, followed
 In the case of disease diagnoses, having higher recall than precision scores is favored to decrease the chances of overlooking individuals with actual disease and left to be untreated.
 
 ### Logistic Regression
-Logistic regression OVR produced highest recall score for undiagnosed diabetes,
+Logistic regression OVR produced highest recall score for undiagnosed diabetes at 63%.
 
