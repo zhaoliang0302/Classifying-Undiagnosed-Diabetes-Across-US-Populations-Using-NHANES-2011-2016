@@ -19,7 +19,7 @@ The nature of survey data such as the NHANES is prone to limitations such as the
 In this dataset medical examination data possessed much higher number of missing values, so to curb this issue Multiple Imputation Chained Equations (MICE) 
 was performed.
 
-![alt text](https://github.com/cspark2610/medical-transcription-classification-/blob/main/images/img1.png)
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_1.png)
 
 ### Processing and Split
 Dataset was split into training and testing sets.
