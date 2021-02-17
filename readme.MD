@@ -15,8 +15,8 @@ For example,
 ### Data Prep
 Based on domain knowledge, a handful of known risk factors were selected as features.
 
-Social Behavioral Factors: age, race, education, sex, citizen, alcohol, veteran, smoke, 
-Clinical Factors: BMI, BUN, systolicBP, AST, ALT
+* Social Behavioral Factors: age, race, education, sex, citizen, alcohol, veteran, smoke, 
+* Clinical Factors: BMI, BUN, systolicBP, AST, ALT
 
 Categorical features were converted to dummies.
 
@@ -30,25 +30,30 @@ The nature of survey data such as the NHANES is prone to having lots of missing 
 Rather than imputing missing values by mean or median, I decided to use Multiple Imputation Chained Equations (MICE) to provide better estimates.
 
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_2.png)
+
 The figure above depicts the difference made through imputation. Since diabetes is our placeholder target variable, the density increases at point 0 and 1;
 0 representing no diabetes and 1 with diabetes.
 
 
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_5.png)
+
 After, cleaning, imputing, and transforming our target variable (mentioned above) with 3 groups, we are left with the above proportion, which is evidently
 imbalanced.
 
 
 ### Overview of Risk Factors by Diabetes Classes
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_3.png)
+
 The figure above can be a bit confusing to interpret due to the fact that these variables are categorical dummies' (I seperated dummy and non-dummy).
 But, it is shown that those without a college degree or has an associates degree has a higher mean value closer to having diabetes. Non-Hispanic whites more cases of diabetes diagnoses than non-hispanic blacks; HOWEVER, looking at the undiagnosed columns, non-hispanic blacks appear to have higher undiagnosed cases than non-hispanic whites. Smokers, alcohols, and veterans have higher mean values in diagnosed and undiagnosed blocks compared to no diabetes, which is corroborated by research.
 
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_4.png)
+
 This figure depicts clinical factors and age* (social factor but continuous). All factors other than AST and ALT seem to be higher in diagnosed categories than non diabetics. However, AST and ALT shows a slight increase in undiagnosed which is interesting.
 
 ### Examine Correlations
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_6.png)
+
 The heatmap is a correlation between features or risk factors to investigate whether correlations are not too high - this would lead to multicollinearity.
 All correlations seem to appear okay with age and BMI having highest correlation at 69%, but fortuantely not high enough for it to be discarded.
 
@@ -68,6 +73,7 @@ Logistic regression OVR produced recall score for undiagnosed diabetes at 63% wi
 ### SVC Linear OVR
 
 SVC Linear OVR produced highest recalled score for undiagnosed diabetes at 73% with most misclassifications with non-diabetic cases. 
+
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_8.png)
 
 ### Conclusion
