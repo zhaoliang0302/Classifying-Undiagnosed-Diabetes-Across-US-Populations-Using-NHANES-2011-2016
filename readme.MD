@@ -1,4 +1,3 @@
-# Currently editing
 ## 73% Recall Score for Classification of Undiagnosed Diabetes Status using Clinical and Questionaire Data from NHANES (2011-2016)
 
 ### Dataset
