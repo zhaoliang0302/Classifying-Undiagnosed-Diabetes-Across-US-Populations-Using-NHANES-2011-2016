@@ -65,16 +65,28 @@ Standardized and Normalized on only training set to mitigate data leakage, follo
 ## Modeling
 In the case of disease diagnoses, having higher recall than precision scores is favored, due to decrease chances of overlooking individuals with actual diseases left to be untreated. In this case, we can live with false positives.
 
-### Logistic Regression OVR
-Logistic regression OVR produced recall score for undiagnosed diabetes at 63% with most misclassifications with diagnosed cases.
-
-![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_7.png)
 
 ### SVC Linear OVR
 
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_7.png)
+
+
 SVC Linear OVR produced highest recalled score for undiagnosed diabetes at 73% with most misclassifications with non-diabetic cases. 
 
+
+### SVM Kernel RBF OVR
+
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_8.png)
+
+### Logistic Regression OVR
+
+![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_9.png)
+
+
+Logistic regression OVR produced recall score for undiagnosed diabetes at 63% with most misclassifications with diagnosed cases.
+
+
+
 
 ### Conclusion
 SVC Linear resulted in highest recall score at 73%, despite having imbalanced class sets. OVR or OVA logistic regression and Linear SVC were able to handle the imbalance and produce decently high metrics. Unfortunately, I was unable to find a OVR approach using statsmodel package for interpretation; however, the results do seem appropriate given previous research. With more data and adding risk factors, it is possible to acheieve even higher recall scores, which will be very interesting, since undiagnosed cases is an overwhelming crisis in the US.
