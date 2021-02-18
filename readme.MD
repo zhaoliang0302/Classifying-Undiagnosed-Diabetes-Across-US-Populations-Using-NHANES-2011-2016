@@ -1,7 +1,8 @@
-## 73% Recall Score for Classification of Undiagnosed Diabetes Status using Clinical and Questionaire Data from NHANES (2011-2016)
+## 82% Recall Score for Classification of Undiagnosed Diabetes Status Using Clinical and Social Behavioral Data from NHANES (2011-2016)
 
 ### Dataset
 Aggregated medical examination data and questionaire data from NHANES 2011 to 2016. The dataset contains 29,902 observations.
+Sample weights were accounted for with medical examination 2 year weights.
 
 ### Outcome variable
 The outcome variable (hemoglobin A1c) was recoded from continuous to categorical (none, diabetic, undiagnosed diabetic).
@@ -71,9 +72,6 @@ In the case of disease diagnoses, having higher recall than precision scores is 
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_7.png)
 
 
-SVC Linear OVR produced highest recalled score for undiagnosed diabetes at 73% with most misclassifications with non-diabetic cases. 
-
-
 ### SVM Kernel RBF OVR
 
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_8.png)
@@ -83,10 +81,14 @@ SVC Linear OVR produced highest recalled score for undiagnosed diabetes at 73% w
 ![alt text](https://github.com/cspark2610/Classifying-Undiagnosed-Diabetes-Across-US-Populations-Using-NHANES-2011-2016/blob/master/images/img_9.png)
 
 
-Logistic regression OVR produced recall score for undiagnosed diabetes at 63% with most misclassifications with diagnosed cases.
+Logistic regression OVR produced recall score for undiagnosed diabetes at 82% with most misclassifications with diagnosed cases.
 
 
 
 
 ### Conclusion
-SVC Linear resulted in highest recall score at 73%, despite having imbalanced class sets. OVR or OVA logistic regression and Linear SVC were able to handle the imbalance and produce decently high metrics. Unfortunately, I was unable to find a OVR approach using statsmodel package for interpretation; however, the results do seem appropriate given previous research. With more data and adding risk factors, it is possible to acheieve even higher recall scores, which will be very interesting, since undiagnosed cases is an overwhelming crisis in the US.
+Logistic Regression produced highest recall score for undiagnosed cases despite class imbalance. One Vs Rest (OVR) or One vs All (OVA) models were selected for classification due to imbalanced classes. Linear SVC and SVM were also able to handle the imbalance and produce decent metrics. 
+
+Unfortunately, an OVR Logistic Regression could not be found using statsmodel package, which would be conducive for interpretation; however, the results do seem to follow findgings of previous research. 
+
+With more data and additional risk factors, it is possible to obtain higher metrics, given the severity of undiagnosed diabetes - not only because of its direct health effects caused by diabetes, but also its close association with other comorbitities - additional research is crucial.
