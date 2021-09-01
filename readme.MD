@@ -89,6 +89,4 @@ Logistic regression OVR produced recall score for undiagnosed diabetes at 82% wi
 ### Conclusion
 Logistic Regression produced highest recall score for undiagnosed cases despite class imbalance. One Vs Rest (OVR) or One vs All (OVA) models were selected for classification due to imbalanced classes. Linear SVC and SVM were also able to handle the imbalance and produce decent metrics. 
 
-Unfortunately, an OVR Logistic Regression could not be found using statsmodel package, which would be conducive for interpretation; however, the results do seem to follow findgings of previous research. 
-
 With more data and additional risk factors, it is possible to obtain higher metrics, given the severity of undiagnosed diabetes - not only because of its direct health effects caused by diabetes, but also its close association with other comorbitities - additional research is crucial.
